@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle cloud-code",
+        "command": "cloud-code:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "cloud-code",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "cloud-code:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

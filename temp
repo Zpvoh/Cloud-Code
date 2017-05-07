@@ -1,0 +1,26 @@
+var fs=require('fs');
+bucket.putObject('code/cloud-code.json',
+{'body':
+fs.createReadStream("C:/Users/qyy/github/cloud-code/menus/cloud-code.json")},
+function(err, data) {
+  console.log(data.statusCode);
+});
+
+var fs=require('fs');
+bucket.getObject('putCodeIn/16302010023.txt',
+{},
+function(err, data) {
+  console.log(data.body);
+  fs.writeFile("C:/Users/qyy/github/cloud-code/menus/test.txt", data.body);
+});
+
+{
+  "Codes":{
+    "includes":{"iostream.h":'Codes/includes/iostream.h'},
+    "stdafx.h":'Codes/stdafx.h'
+  },
+  "README.md":'README.md'
+}
+
+var editor=atom.workspace.getActiveTextEditor();
+console.log(editor.getPath());
